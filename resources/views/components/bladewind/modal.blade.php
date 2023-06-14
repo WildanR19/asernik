@@ -48,6 +48,8 @@
         'xl' => 'w-2/3',
         'omg' => 'w-11/12'
     ],
+    'ok_button_type' => 'button',
+    'ok_button_form' => '',
 ])
 @php
     // reset variables for Laravel 8 support
@@ -106,10 +108,12 @@
                         onclick="{!! $cancelAction !!}"
                         class="cancel {{ $cancelCss }}">{{$cancel_button_label}}</x-bladewind::button>
                         
-                    <x-bladewind::button
+                    <x-button
                         size="small" 
                         onclick="{!! $okAction !!}"
-                        class="okay ml-3 {{ $okCss }}">{{$ok_button_label}}</x-bladewind::button>
+                        type="{!! $ok_button_type !!}"
+                        form="{!! $ok_button_form !!}"
+                        class="okay ml-3 {{ $okCss }}">{{$ok_button_label}}</x-button>
                 </div>
             @endif
         </div>

@@ -1,7 +1,5 @@
 <footer {{ $attributes->
-    merge(['class' => 'bg-black fixed
-             inset-x-0
-             bottom-0']) }}>
+    merge(['class' => 'bg-black fixed inset-x-0 bottom-0']) }}>
     <div class="py-4 flex flex-col justify-center items-center">
         <p
             tabindex="0"

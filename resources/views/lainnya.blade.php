@@ -11,8 +11,8 @@
 
                 <x-bladewind.card reduce_padding="true">
                     <div class="flex items-center">
-                        <div>
-                            <x-bladewind.avatar image="/path/to/the/image/file" />
+                        <div class="inline-block overflow-hidden w-20 h-auto">
+                            <img src="{{ asset('assets/images/1.png') }}" alt="" class="object-cover">
                         </div>
                         <div class="grow pl-2 pt-1">
                             <h2 class="font-semibold text-xl">Panduan</h2>
@@ -31,46 +31,46 @@
                     </div>
                 </x-bladewind.card>
                 <x-bladewind.card reduce_padding="true">
-                    <div class="flex items-center">
-                        <div>
-                            <x-bladewind.avatar image="/path/to/the/image/file" />
+                    <a href="https://diskominfo.semarangkota.go.id/kontak" class="flex items-center">
+                        <div class="inline-block overflow-hidden w-20 h-auto justify-items-center">
+                            <img src="{{ asset('assets/images/2.png') }}" alt="" class="object-cover h-16 w-auto">
                         </div>
                         <div class="grow pl-2 pt-1">
                             <h2 class="font-semibold text-xl">Bantuan</h2>
                             <p>Hubungi Kami</p>
                         </div>
                         <div>
-                            <a href="">
+                            <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                     class="w-5 h-5">
                                     <path fill-rule="evenodd"
                                         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                                         clip-rule="evenodd" />
                                 </svg>
-                            </a>
+                            </span>
                         </div>
-                    </div>
+                    </a>
                 </x-bladewind.card>
                 <x-bladewind.card reduce_padding="true">
-                    <div class="flex items-center">
-                        <div>
-                            <x-bladewind.avatar image="/path/to/the/image/file" />
+                    <a href="https://diskominfo.semarangkota.go.id/page/detail/1" class="flex items-center">
+                        <div class="inline-block overflow-hidden w-20 h-auto">
+                            <img src="{{ asset('assets/images/3.png') }}" alt="" class="object-cover h-16 w-auto">
                         </div>
                         <div class="grow pl-2 pt-1">
                             <h2 class="font-semibold text-xl">Tentang Kami</h2>
                             <p>Panduan Penyuluhan</p>
                         </div>
                         <div>
-                            <a href="">
+                            <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                     class="w-5 h-5">
                                     <path fill-rule="evenodd"
                                         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                                         clip-rule="evenodd" />
                                 </svg>
-                            </a>
+                            </span>
                         </div>
-                    </div>
+                    </a>
                 </x-bladewind.card>
             </div>
         </div>

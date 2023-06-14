@@ -20,52 +20,96 @@
                             </p>
                         </header>
 
-                        <form method="post" action="{{ route('biodata.store') }}" class="mt-6 space-y-6">
+                        <form method="post" action="{{ route('biodata.store') }}" class="mt-6 space-y-6" id="bioForm">
                             @csrf
-                            @method('patch')
+                            @method('post')
 
                             <div>
-                                <x-input-label for="name" value="Nama *" />
-                                <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
-                                    required autofocus autocomplete="name" />
-                                <x-input-error class="mt-2" :messages="$errors->get('name')" />
-                            </div>
-
-                            <div>
-                                <x-input-label for="address" value="Alamat *" />
-                                <x-textarea id="address" name="address" rows="3" class="mt-1"
-                                    required autocomplete="address" />
-                                <x-input-error class="mt-2" :messages="$errors->get('address')" />
-                            </div>
-
-
-                            <div>
-                                <x-input-label for="email" value="Email *" />
-                                <x-text-input id="email" name="email" type="email" class="mt-1 block w-full"
-                                    required autocomplete="username" />
-                                <x-input-error class="mt-2" :messages="$errors->get('email')" />
+                                <x-input-label for="nama" value="Nama *" />
+                                <x-text-input id="nama" name="nama" type="text" class="mt-1 block w-full"
+                                    required autofocus autocomplete="nama" />
+                                <x-input-error class="mt-2" :messages="$errors->get('nama')" />
                             </div>
 
                             <div>
-                                <x-input-label for="activity" value="Kegiatan yang diikuti *" />
-                                <x-textarea id="activity" name="activity" rows="3" class="mt-1"
-                                    required autocomplete="activity" />
-                                <x-input-error class="mt-2" :messages="$errors->get('activity')" />
+                                <x-input-label for="nik" value="NIK *" />
+                                <x-text-input id="nik" name="nik" type="text" class="mt-1 block w-full"
+                                    required autocomplete="nik" />
+                                <x-input-error class="mt-2" :messages="$errors->get('nik')" />
                             </div>
 
-                            <div class="flex items-center gap-4">
-                                <x-button>{{ __('Save') }}</x-button>
-
-                                @if (session('status') === 'profile-updated')
-                                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
-                                        class="text-sm text-gray-600">{{ __('Saved.') }}</p>
-                                @endif
+                            <div>
+                                <x-input-label for="alamat" value="Alamat *" />
+                                <x-textarea id="alamat" name="alamat" rows="3" class="mt-1" required
+                                    autocomplete="alamat" />
+                                <x-input-error class="mt-2" :messages="$errors->get('alamat')" />
                             </div>
+
+                            <div>
+                                <x-input-label for="tgl_lahir" value="Tanggal Lahir *" />
+                                <x-text-input id="tgl_lahir" name="tgl_lahir" type="date" onfocus="this.showPicker()" class="mt-1 block w-full"
+                                    required autocomplete="tgl_lahir" />
+                                <x-input-error class="mt-2" :messages="$errors->get('tgl_lahir')" />
+                            </div>
+
+                            <div>
+                                <x-input-label for="vaksin" value="Jenis Vaksin yang diikuti *" />
+                                <x-text-input id="vaksin" name="vaksin" type="text" class="mt-1 block w-full"
+                                    required autocomplete="vaksin" />
+                                <x-input-error class="mt-2" :messages="$errors->get('vaksin')" />
+                            </div>
+
                         </form>
+                        <div class="flex items-center gap-4 mt-4">
+                            <x-bladewind.button onclick="showModal('survey')"
+                                class="bg-gray-800 hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900">
+                                Create
+                            </x-bladewind.button>
+                        </div>
                     </section>
 
                 </div>
             </div>
         </div>
     </div>
+    <x-bladewind.modal size="large" name="survey" title="Kuesioner"
+        ok_button_label="Create"
+        ok_button_type="submit"
+        ok_button_form="bioForm">
+        <x-bladewind.list-view>
+            <x-bladewind.list-item>
+                <div>
+                    <h3>1. Pertanyaan 1</h3>
+                    <div class="mt-2">
+                        <x-bladewind.radio-button label="Action" name="p1" />
+                        <x-bladewind.radio-button label="Comedy" name="p1" />
+                        <x-bladewind.radio-button label="Drama" name="p1" />
+                        <x-bladewind.radio-button label="Thriller" name="p1" />
+                    </div>
+                </div>
+            </x-bladewind.list-item>
+            <x-bladewind.list-item>
+                <div>
+                    <h3>2. Pertanyaan 2</h3>
+                    <div class="mt-2">
+                        <x-bladewind.radio-button label="Action" name="p2" />
+                        <x-bladewind.radio-button label="Comedy" name="p2" />
+                        <x-bladewind.radio-button label="Drama" name="p2" />
+                        <x-bladewind.radio-button label="Thriller" name="p2" />
+                    </div>
+                </div>
+            </x-bladewind.list-item>
+            <x-bladewind.list-item>
+                <div>
+                    <h3>3. Pertanyaan 3</h3>
+                    <div class="mt-2">
+                        <x-bladewind.radio-button label="Action" name="p3" />
+                        <x-bladewind.radio-button label="Comedy" name="p3" />
+                        <x-bladewind.radio-button label="Drama" name="p3" />
+                        <x-bladewind.radio-button label="Thriller" name="p3" />
+                    </div>
+                </div>
+            </x-bladewind.list-item>
+        </x-bladewind.list-view>
+    </x-bladewind.modal>
 </x-app-layout>

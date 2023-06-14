@@ -53,7 +53,7 @@
             {{ $slot }}
         </main>
 
-        <x-footer class="bg-secondary" />
+        <x-footer class="bg-primary" />
     </div>
 
 </body>
