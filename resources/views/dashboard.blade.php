@@ -49,7 +49,7 @@
                     </a>
                 </x-bladewind.card>
                 <x-bladewind.card class="cursor-pointer hover:shadow-gray-300 rounded-xl">
-                    <div>
+                    <a href="{{ route('survey.index') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
                             class="h-20 sm:h-32 w-20 sm:w-32 mx-auto rounded-full p-3 bg-red-600 text-white">
@@ -59,7 +59,7 @@
 
 
                         <span class="text-center block font-semibold mt-2 sm:text-2xl">Survey</span>
-                    </div>
+                    </a>
                 </x-bladewind.card>
                 <x-bladewind.card class="cursor-pointer hover:shadow-gray-300 rounded-xl">
                     <a href="{{ route('lainnya') }}">

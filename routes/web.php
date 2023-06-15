@@ -22,7 +22,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('dashboard');
 });
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -34,11 +34,8 @@ Route::middleware('auth')->group(function () {
         return view('lainnya');
     })->name('lainnya');
     Route::get('survey', function () {
-        return view('survey.index');
+        return view('survey');
     })->name('survey.index');
-    Route::get('survey/show', function () {
-        return view('survey.show');
-    })->name('survey.show');
     Route::get('sertifikat-list', [SertifikatController::class, 'index'])->name('sertifikat.index');
     Route::get('sertifikat-download', [SertifikatController::class, 'download'])->name('sertifikat.download');
 });

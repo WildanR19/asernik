@@ -79,34 +79,41 @@
         <x-bladewind.list-view>
             <x-bladewind.list-item>
                 <div>
-                    <h3>1. Pertanyaan 1</h3>
+                    <h3>1. Apa yang anda rasakan setelah vaksin sinovac ?</h3>
                     <div class="mt-2">
-                        <x-bladewind.radio-button label="Action" name="p1" />
-                        <x-bladewind.radio-button label="Comedy" name="p1" />
-                        <x-bladewind.radio-button label="Drama" name="p1" />
-                        <x-bladewind.radio-button label="Thriller" name="p1" />
+                        <x-text-input id="q1" name="q1" type="text" class="mt-1 block w-full" required autocomplete="q1" />
                     </div>
                 </div>
             </x-bladewind.list-item>
             <x-bladewind.list-item>
                 <div>
-                    <h3>2. Pertanyaan 2</h3>
+                    <h3>2. Apa anda merasa lemas setelah vaksin?</h3>
                     <div class="mt-2">
-                        <x-bladewind.radio-button label="Action" name="p2" />
-                        <x-bladewind.radio-button label="Comedy" name="p2" />
-                        <x-bladewind.radio-button label="Drama" name="p2" />
-                        <x-bladewind.radio-button label="Thriller" name="p2" />
+                        <x-text-input id="q2" name="q2" type="text" class="mt-1 block w-full" required autocomplete="q2" />
                     </div>
                 </div>
             </x-bladewind.list-item>
             <x-bladewind.list-item>
                 <div>
-                    <h3>3. Pertanyaan 3</h3>
+                    <h3>3. Apakah anda merasa pusing setelah melakukan vaksin?</h3>
                     <div class="mt-2">
-                        <x-bladewind.radio-button label="Action" name="p3" />
-                        <x-bladewind.radio-button label="Comedy" name="p3" />
-                        <x-bladewind.radio-button label="Drama" name="p3" />
-                        <x-bladewind.radio-button label="Thriller" name="p3" />
+                       <x-text-input id="q3" name="q3" type="text" class="mt-1 block w-full" required autocomplete="q3" />
+                    </div>
+                </div>
+            </x-bladewind.list-item>
+            <x-bladewind.list-item>
+                <div>
+                    <h3>4. Apakah anda merasa demam setelah melakukan vaksin?</h3>
+                    <div class="mt-2">
+                       <x-text-input id="q4" name="q4" type="text" class="mt-1 block w-full" required autocomplete="q4" />
+                    </div>
+                </div>
+            </x-bladewind.list-item>
+            <x-bladewind.list-item>
+                <div>
+                    <h3>5. Apakah anda muntah setelah melakukan vaksin</h3>
+                    <div class="mt-2">
+                       <x-text-input id="q5" name="q5" type="text" class="mt-1 block w-full" required autocomplete="q5" />
                     </div>
                 </div>
             </x-bladewind.list-item>
